@@ -30,8 +30,6 @@ bool Renderer::Init(HWND hWnd, int width, int height, bool fullScreen)
 	HRESULT hr = m_D3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd,
 		D3DCREATE_SOFTWARE_VERTEXPROCESSING, &pp, &m_Device);
 
-
-
 	//검사
 	if FAILED(hr)
 		return false;
@@ -57,7 +55,7 @@ void Renderer::Begin()
 	//화면에 그릴 준비.
 	m_Device->BeginScene();
 	//화면을 설정한 컬러로 초기화
-	m_Device->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(255, 255, 0), 1.0f, 0);
+	m_Device->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(128, 128, 0), 1.0f, 0);
 }
 
 void Renderer::End()

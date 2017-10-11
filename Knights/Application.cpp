@@ -19,10 +19,11 @@ bool Application::Init(wchar_t* title, int width, int height, bool fullScreen)
 	ScreenWidth = width;
 	ScreenHeight = height;
 
-	//윈도우, 렌더러 초기화
+	//윈도우 초기화
 	if (!(_CreateWindow(ScreenWidth, ScreenHeight, fullScreen)))
 		return false;
 
+	//렌더러 초기화
 	if (!(_CreateRenderer(fullScreen)))
 		return false;
 
@@ -91,7 +92,7 @@ bool Application::_CreateWindow(int width, int height, bool fullScreen)
 	{
 		Style = WS_POPUP | WS_EX_TOPMOST;
 	}
-	else
+	else //창 화면
 	{
 		Style = WS_POPUP;
 
@@ -107,7 +108,7 @@ bool Application::_CreateWindow(int width, int height, bool fullScreen)
 	}
 	
 	m_handle = CreateWindow(L"Knights", Title, Style, x, y, width, height, NULL, NULL, wc.hInstance, NULL);
-
+	
 	if (m_handle == NULL)
 		return false;
 

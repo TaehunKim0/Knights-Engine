@@ -152,6 +152,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Director.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="PCH.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PCH.h</PrecompiledHeaderFile>
@@ -163,13 +165,19 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PCH.h</PrecompiledHeaderFile>
     </ClCompile>
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="TypeDefine.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Director.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="PCH.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="Singleton.h" />
+    <ClInclude Include="TypeDefine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

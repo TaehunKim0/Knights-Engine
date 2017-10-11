@@ -2,22 +2,63 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="WinMain.cpp" />
-    <ClCompile Include="Application.cpp" />
     <ClCompile Include="PCH.cpp">
-      <Filter>PCH</Filter>
+      <Filter>PCH,Type</Filter>
     </ClCompile>
-    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Director.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Node</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Node</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeDefine.cpp">
+      <Filter>PCH,Type</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="PCH.h">
-      <Filter>PCH</Filter>
+      <Filter>PCH,Type</Filter>
     </ClInclude>
-    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Renderer.h">
+      <Filter>Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Director.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Node</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Node</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeDefine.h">
+      <Filter>PCH,Type</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="PCH">
+    <Filter Include="Graphic">
+      <UniqueIdentifier>{b6e406db-55bd-42eb-ade9-2701a147f095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{c0a18a6e-ecdf-4c0e-8f5f-5ad95fe7544e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Node">
+      <UniqueIdentifier>{769be04a-7de5-45bb-bbdf-8243d8eaa96b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PCH,Type">
       <UniqueIdentifier>{cca8b809-ff25-4606-82c1-f091efdb094f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

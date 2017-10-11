@@ -5,6 +5,11 @@
 #include<d3dx9.h>
 #include<string>
 
+#include<vector>
+#include<math.h>
+
+#include"TypeDefine.h"
 #include"Singleton.h"
 #include"Application.h"
 #include"Renderer.h"
+#include"GameObject.h"
