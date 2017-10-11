@@ -2,9 +2,23 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="WinMain.cpp" />
-    <ClCompile Include="PCH.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="PCH.cpp">
+      <Filter>PCH</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PCH.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="PCH.h">
+      <Filter>PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="PCH">
+      <UniqueIdentifier>{cca8b809-ff25-4606-82c1-f091efdb094f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
