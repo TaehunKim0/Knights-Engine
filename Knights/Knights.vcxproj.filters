@@ -3,98 +3,90 @@
   <ItemGroup>
     <ClCompile Include="WinMain.cpp" />
     <ClCompile Include="PCH.cpp">
-      <Filter>Engine\PCH,Type</Filter>
+      <Filter>PCH,Type</Filter>
     </ClCompile>
     <ClCompile Include="Renderer.cpp">
-      <Filter>Engine\Graphic</Filter>
+      <Filter>Graphic</Filter>
     </ClCompile>
     <ClCompile Include="Application.cpp">
-      <Filter>Engine\Manager</Filter>
+      <Filter>Manager</Filter>
     </ClCompile>
     <ClCompile Include="Director.cpp">
-      <Filter>Engine\Manager</Filter>
+      <Filter>Manager</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
-      <Filter>Engine\Node</Filter>
+      <Filter>Node</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
-      <Filter>Engine\Node</Filter>
+      <Filter>Node</Filter>
     </ClCompile>
     <ClCompile Include="TypeDefine.cpp">
-      <Filter>Engine\PCH,Type</Filter>
+      <Filter>PCH,Type</Filter>
     </ClCompile>
     <ClCompile Include="Texture.cpp">
-      <Filter>Engine\Resource</Filter>
+      <Filter>Resource</Filter>
     </ClCompile>
     <ClCompile Include="ResourcesMgr.cpp">
-      <Filter>Engine\Resource</Filter>
+      <Filter>Resource</Filter>
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
-      <Filter>Engine</Filter>
+      <Filter>Node</Filter>
     </ClCompile>
-    <ClCompile Include="SampleScene.cpp">
-      <Filter>Game</Filter>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Node</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Singleton.h" />
     <ClInclude Include="PCH.h">
-      <Filter>Engine\PCH,Type</Filter>
+      <Filter>PCH,Type</Filter>
     </ClInclude>
     <ClInclude Include="Renderer.h">
-      <Filter>Engine\Graphic</Filter>
+      <Filter>Graphic</Filter>
     </ClInclude>
     <ClInclude Include="Application.h">
-      <Filter>Engine\Manager</Filter>
+      <Filter>Manager</Filter>
     </ClInclude>
     <ClInclude Include="Director.h">
-      <Filter>Engine\Manager</Filter>
+      <Filter>Manager</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
-      <Filter>Engine\Node</Filter>
+      <Filter>Node</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
-      <Filter>Engine\Node</Filter>
+      <Filter>Node</Filter>
     </ClInclude>
     <ClInclude Include="TypeDefine.h">
-      <Filter>Engine\PCH,Type</Filter>
+      <Filter>PCH,Type</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
-      <Filter>Engine\Resource</Filter>
+      <Filter>Resource</Filter>
     </ClInclude>
     <ClInclude Include="ResourcesMgr.h">
-      <Filter>Engine\Resource</Filter>
-    </ClInclude>
-    <ClInclude Include="Singleton.h">
-      <Filter>Engine</Filter>
+      <Filter>Resource</Filter>
     </ClInclude>
     <ClInclude Include="Sprite.h">
-      <Filter>Engine</Filter>
+      <Filter>Node</Filter>
     </ClInclude>
-    <ClInclude Include="SampleScene.h">
-      <Filter>Game</Filter>
+    <ClInclude Include="Animation.h">
+      <Filter>Node</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Game">
-      <UniqueIdentifier>{11040b33-35c4-4535-b7ec-783128b057b7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine">
-      <UniqueIdentifier>{e74341e6-5cd8-4fd3-a41a-7b58cc146c36}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\PCH,Type">
-      <UniqueIdentifier>{cca8b809-ff25-4606-82c1-f091efdb094f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Resource">
-      <UniqueIdentifier>{443ec86c-e3b7-46ad-be41-16514729b656}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Graphic">
+    <Filter Include="Graphic">
       <UniqueIdentifier>{b6e406db-55bd-42eb-ade9-2701a147f095}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Manager">
+    <Filter Include="Manager">
       <UniqueIdentifier>{c0a18a6e-ecdf-4c0e-8f5f-5ad95fe7544e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Node">
+    <Filter Include="Node">
       <UniqueIdentifier>{769be04a-7de5-45bb-bbdf-8243d8eaa96b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PCH,Type">
+      <UniqueIdentifier>{cca8b809-ff25-4606-82c1-f091efdb094f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{443ec86c-e3b7-46ad-be41-16514729b656}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

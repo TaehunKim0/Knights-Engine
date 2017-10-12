@@ -32,6 +32,5 @@ public:
 	void RemoveChild(GameObject* child);
 
 	void SetPosition(float x, float y);
-
 };
 
