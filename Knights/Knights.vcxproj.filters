@@ -26,6 +26,9 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
+    <ClCompile Include="ResourcesMgr.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h" />
@@ -51,6 +54,9 @@
       <Filter>PCH,Type</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourcesMgr.h">
       <Filter>Resource</Filter>
     </ClInclude>
   </ItemGroup>

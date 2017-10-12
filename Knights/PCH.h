@@ -12,6 +12,7 @@
 
 #include<vector>
 #include<math.h>
+#include<unordered_map>
 
 #include"TypeDefine.h"
 #include"Singleton.h"
@@ -20,3 +21,5 @@
 #include"GameObject.h"
 #include"Scene.h"
 #include"Director.h"
+#include"Texture.h"
+#include"ResourcesMgr.h"
