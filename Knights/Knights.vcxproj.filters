@@ -34,6 +34,7 @@
     <ClCompile Include="Animation.cpp">
       <Filter>Node</Filter>
     </ClCompile>
+    <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h" />
