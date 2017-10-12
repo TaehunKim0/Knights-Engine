@@ -29,7 +29,12 @@
     <ClCompile Include="ResourcesMgr.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
-    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Node</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Node</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h" />
@@ -60,7 +65,12 @@
     <ClInclude Include="ResourcesMgr.h">
       <Filter>Resource</Filter>
     </ClInclude>
-    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Sprite.h">
+      <Filter>Node</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Node</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Graphic">
