@@ -92,3 +92,9 @@ void GameObject::RemoveChild(GameObject * child)
 	}
 
 }
+
+void GameObject::SetPosition(float x, float y)
+{
+	m_Position.x += x;
+	m_Position.y += y;
+}
