@@ -15,4 +15,13 @@ public:
 	static Texture* Create(const std::wstring& filename); //wstring은 유니코드
 	bool InitFromFile(const std::wstring& filename);
 
+	Vector2 GetSize()
+	{
+		return m_Size;
+	}
+
+	LPDIRECT3DTEXTURE9 GetD3DTexture()
+	{
+		return m_D3DTexture;
+	}
 };

@@ -167,6 +167,7 @@
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResourcesMgr.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TypeDefine.cpp" />
     <ClCompile Include="WinMain.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="ResourcesMgr.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Singleton.h" />
+    <ClInclude Include="Sprite.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TypeDefine.h" />
   </ItemGroup>

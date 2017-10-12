@@ -1,7 +1,7 @@
 #pragma once
 class GameObject
 {
-private:
+protected:
 	GameObject* m_Parent;
 	std::vector<GameObject*> m_Children;
 
@@ -9,6 +9,9 @@ private:
 	Vector2 m_Position;
 	Vector2 m_Scale;
 	Vector2 m_Size;
+
+	//Vector2 AnchorPoint; //입력받을 AnchorPoint
+	Vector2 m_AnchorPoint; //내 사이즈에 따라 AnchorPoint는 바뀌기 때문에 사이즈에 따라 바뀐 앵커포인트
 
 	float m_Rotation;
 

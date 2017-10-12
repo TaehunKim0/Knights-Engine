@@ -29,6 +29,7 @@
     <ClCompile Include="ResourcesMgr.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
+    <ClCompile Include="Sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h" />
@@ -59,6 +60,7 @@
     <ClInclude Include="ResourcesMgr.h">
       <Filter>Resource</Filter>
     </ClInclude>
+    <ClInclude Include="Sprite.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Graphic">
