@@ -23,6 +23,9 @@
     <ClCompile Include="TypeDefine.cpp">
       <Filter>PCH,Type</Filter>
     </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h" />
@@ -47,6 +50,9 @@
     <ClInclude Include="TypeDefine.h">
       <Filter>PCH,Type</Filter>
     </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Graphic">
@@ -60,6 +66,9 @@
     </Filter>
     <Filter Include="PCH,Type">
       <UniqueIdentifier>{cca8b809-ff25-4606-82c1-f091efdb094f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{443ec86c-e3b7-46ad-be41-16514729b656}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

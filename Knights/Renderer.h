@@ -1,11 +1,10 @@
 #pragma once
 class Renderer : public Singleton<Renderer>
 {
-private:
+public:
 	LPDIRECT3D9 m_D3D;
 	LPDIRECT3DDEVICE9 m_Device;
 	LPD3DXSPRITE m_Sprite;
-
 
 public:
 	Renderer();
@@ -17,6 +16,8 @@ public:
 	void Begin();
 	void End();
 
+public:
+	
 
 };
 
