@@ -6,13 +6,15 @@ private:
 	std::vector<GameObject*> m_Children;
 
 	Matrix m_Matrix;
-	Vector2 m_Postion;
+	Vector2 m_Position;
 	Vector2 m_Scale;
 	Vector2 m_Size;
 
 	float m_Rotation;
 
 	std::string m_Name;
+
+	bool m_Visible;
 
 public:
 	GameObject();
