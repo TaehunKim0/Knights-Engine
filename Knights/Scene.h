@@ -2,13 +2,12 @@
 class Scene : public GameObject
 {
 private:
-
+	//씬의 카메라를 여기다 두자
 
 public:
 	Scene();
-	~Scene();
+	virtual ~Scene();
 
-	void Update(float deltaTime);
-	void Render();
+	virtual void Update(float deltaTime);
+ 	virtual void Render();
 };
-
