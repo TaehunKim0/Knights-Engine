@@ -13,6 +13,7 @@ Animation::~Animation()
 {
 }
 
+
 Animation * Animation::Create(int delay)
 {
 	auto anim = new (std::nothrow) Animation();
@@ -33,13 +34,16 @@ bool Animation::Init(int delay)
 
 void Animation::AddFrame(std::wstring filename)
 {
-	auto sprite = Sprite::Create(filename);
-	sprite->SetParent(this);
-	Anim.push_back(sprite);
+	auto frame = Sprite::Create(filename);
+	frame->SetParent(this);
+
+	Anim.push_back(frame);
 }
 
 void Animation::Update(float deltaTime)
 {
+	GameObject::Update(deltaTime);
+
 	m_FrameCounter++;
 	if (m_FrameCounter >= m_Delay) {
 		m_FrameCounter = 0;
@@ -55,5 +59,6 @@ void Animation::Update(float deltaTime)
 
 void Animation::Render()
 {
+	GameObject::Render();
 	Anim.at(m_CurrentFrame)->Render();
 }

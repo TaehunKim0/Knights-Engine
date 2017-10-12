@@ -3,6 +3,7 @@ class SampleScene : public Scene
 {
 public:
 	Sprite* man;
+	Animation* manAnim;
 
 	CREATE_FUNC(SampleScene);
 
@@ -14,4 +15,3 @@ public:
 	void Update(float deltaTime);
 	void Render();
 };
-
