@@ -23,3 +23,4 @@
 #include"Director.h"
 #include"Texture.h"
 #include"ResourcesMgr.h"
+#include"Sprite.h"
