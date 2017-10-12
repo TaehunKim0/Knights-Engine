@@ -4,7 +4,7 @@
 
 GameObject::GameObject()
 	:m_Parent(nullptr)
-	,m_Position(0.f,0.f)
+	,m_Position(1.f,1.f)
 	,m_Scale(1.f,1.f)
 	,m_Size(0.f,0.f)
 	,m_Rotation(0.f)
@@ -58,9 +58,6 @@ void GameObject::Render()
 
 void GameObject::SetParent(GameObject * parent)
 {
-	if (parent == nullptr)
-		return;
-
 	m_Parent = parent;
 }
 
