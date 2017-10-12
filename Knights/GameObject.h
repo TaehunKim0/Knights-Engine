@@ -30,5 +30,8 @@ public:
 	void AddChild(GameObject* child);
 
 	void RemoveChild(GameObject* child);
+
+	void SetPosition(float x, float y);
+
 };
 

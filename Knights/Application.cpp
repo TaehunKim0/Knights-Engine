@@ -55,8 +55,6 @@ bool Application::GameLoop()
 			Renderer::GetInstance()->Begin();
 			Director::GetInstance()->Render();
 			Renderer::GetInstance()->End();
-
-			//GAMELOOP
 		}
 	}
 
