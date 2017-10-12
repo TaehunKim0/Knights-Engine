@@ -18,4 +18,5 @@
 #include"Application.h"
 #include"Renderer.h"
 #include"GameObject.h"
-
+#include"Scene.h"
+#include"Director.h"

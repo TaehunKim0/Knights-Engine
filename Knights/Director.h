@@ -2,17 +2,14 @@
 class Director : public Singleton<Director>
 {
 private:
-	//Current Scene
+	Scene* CurrentScene;
 
 public:
 	Director();
 	~Director();
 
-	//void SetScene()
+	void SetScene(Scene* scene);
 
 	void Update(float deltaTime);
 	void Render();
-
-
 };
-
