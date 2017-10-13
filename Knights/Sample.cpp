@@ -28,6 +28,8 @@ void Sample::Update(float deltaTime)
 	if (Input::GetInstance()->GetKeyState(VK_SPACE) == KeyState::Up)
 		man->SetPosition(0.f, 10.f);
 
+	if (Input::GetInstance()->GetMouseState(MouseButton::Left) == KeyState::Up)
+		man->SetPosition(10.f, 0.f);
 
 }
 

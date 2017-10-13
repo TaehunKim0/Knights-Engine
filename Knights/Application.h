@@ -28,6 +28,9 @@ public:
 public:
 	static LRESULT CALLBACK WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam);
 
-
+	HWND GetHandle()
+	{
+		return m_handle;
+	}
 };
 

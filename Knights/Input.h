@@ -8,6 +8,12 @@ enum class KeyState
 	Up
 };
 
+enum MouseButton
+{
+	Left = VK_LBUTTON,
+	Right = VK_RBUTTON
+};
+
 class Input : public Singleton<Input>
 {
 private:
@@ -23,6 +29,9 @@ public:
 	void Update();
 
 	KeyState GetKeyState(int key);
+	KeyState GetMouseState(int button);
+
 	void UpdateKeyState();
+	void UpdateMouseState();
 };
 
