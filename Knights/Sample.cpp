@@ -26,16 +26,24 @@ void Sample::Update(float deltaTime)
 {
 	Scene::Update(deltaTime);
 
-	if (Input::GetInstance()->GetKeyState(VK_SPACE) == KeyState::Up)
+	if (Input::GetInstance()->GetKeyState(VK_UP) == KeyState::Pressed)
+		man->SetPosition(0.f, -10.f);
+
+	if (Input::GetInstance()->GetKeyState(VK_DOWN) == KeyState::Pressed)
 		man->SetPosition(0.f, 10.f);
 
+	if (Input::GetInstance()->GetKeyState(VK_LEFT) == KeyState::Pressed)
+		man->SetPosition(-10.f, 0.f);
+
+	if (Input::GetInstance()->GetKeyState(VK_RIGHT) == KeyState::Pressed)
+		man->SetPosition(10.f, 0.f);
+
 	if (Input::GetInstance()->GetMouseState(MouseButton::Left) == KeyState::Up)
-		GetCamera()->Translate(10.f, 10.f);
+		GetCamera()->Translate(0.f, 10.f);
 
 	if (Input::GetInstance()->GetMouseState(MouseButton::Right) == KeyState::Up)
-	{
-		man->SetPosition(10.f, 0.f);
-	}
+		GetCamera()->Translate(10.f, 0.f);
+
 
 }
 
