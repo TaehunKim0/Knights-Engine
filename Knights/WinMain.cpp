@@ -1,12 +1,17 @@
 #include"PCH.h"
+#include"Sample.h"
+
 INT WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 {
 	Application* app = Application::GetInstance();
 
 	//초기화
 	app->Init(L"Knights", 1250, 720, false);
+	Director::GetInstance()->SetScene(Sample::Create());
+
 	//루프
 	app->GameLoop();
+
 	//해제
 	app->Release();
 }

@@ -35,6 +35,7 @@
       <Filter>Node</Filter>
     </ClCompile>
     <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="Sample.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h" />
@@ -71,6 +72,7 @@
     <ClInclude Include="Animation.h">
       <Filter>Node</Filter>
     </ClInclude>
+    <ClInclude Include="Sample.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Graphic">

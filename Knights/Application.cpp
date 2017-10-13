@@ -122,4 +122,3 @@ bool Application::_CreateRenderer(bool fullScreen)
 
 	return true;
 }
-

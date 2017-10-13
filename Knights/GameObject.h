@@ -1,7 +1,7 @@
 #pragma once
 class GameObject
 {
-protected:
+public:
 	GameObject* m_Parent;
 	std::vector<GameObject*> m_Children;
 

@@ -167,6 +167,7 @@
     </ClCompile>
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResourcesMgr.cpp" />
+    <ClCompile Include="Sample.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Texture.cpp" />
@@ -181,6 +182,7 @@
     <ClInclude Include="PCH.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourcesMgr.h" />
+    <ClInclude Include="Sample.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="Sprite.h" />
