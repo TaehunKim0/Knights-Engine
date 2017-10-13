@@ -13,6 +13,7 @@ Sample::~Sample()
 
 bool Sample::Init()
 {
+	Scene::Init();
 	man = Sprite::Create(L"Resources/Anubis.png");
 
 	man->SetPosition(500.f, 500.f);
@@ -29,7 +30,12 @@ void Sample::Update(float deltaTime)
 		man->SetPosition(0.f, 10.f);
 
 	if (Input::GetInstance()->GetMouseState(MouseButton::Left) == KeyState::Up)
+		GetCamera()->Translate(10.f, 10.f);
+
+	if (Input::GetInstance()->GetMouseState(MouseButton::Right) == KeyState::Up)
+	{
 		man->SetPosition(10.f, 0.f);
+	}
 
 }
 

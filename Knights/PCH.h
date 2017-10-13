@@ -20,6 +20,7 @@
 #include"Renderer.h"
 #include"GameObject.h"
 #include"Scene.h"
+#include"Camera.h"
 #include"Director.h"
 #include"Texture.h"
 #include"ResourcesMgr.h"

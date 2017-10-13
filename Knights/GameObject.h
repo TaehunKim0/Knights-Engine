@@ -1,7 +1,7 @@
 #pragma once
 class GameObject
 {
-public:
+protected:
 	GameObject* m_Parent;
 	std::vector<GameObject*> m_Children;
 
@@ -31,6 +31,26 @@ public:
 
 	void RemoveChild(GameObject* child);
 
+public:
+	Vector2 GetPosition()
+	{
+		return m_Position;
+	}
+
+	Vector2 GetScale()
+	{
+		return m_Scale;
+	}
+
+	float GetRotation()
+	{
+		return m_Rotation;
+	}
+
+public:
 	void SetPosition(float x, float y);
+	void SetPosition(Vector2 pos);
+	void SetScale(Vector2 scale);
+	void SetRotation(float r);
 };
 

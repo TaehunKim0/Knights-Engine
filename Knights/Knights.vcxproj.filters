@@ -39,6 +39,9 @@
     <ClCompile Include="Input.cpp">
       <Filter>Manager</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Node</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h" />
@@ -78,6 +81,9 @@
     <ClInclude Include="Sample.h" />
     <ClInclude Include="Input.h">
       <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Node</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

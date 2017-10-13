@@ -4,7 +4,7 @@
 
 GameObject::GameObject()
 	:m_Parent(nullptr)
-	,m_Position(1.f,1.f)
+	,m_Position(0.f,0.f)
 	,m_Scale(1.f,1.f)
 	,m_Size(0.f,0.f)
 	,m_Rotation(0.f)
@@ -94,4 +94,19 @@ void GameObject::SetPosition(float x, float y)
 {
 	m_Position.x += x;
 	m_Position.y += y;
+}
+
+void GameObject::SetPosition(Vector2 pos)
+{
+	m_Position = pos;
+}
+
+void GameObject::SetScale(Vector2 scale)
+{
+	m_Scale = scale;
+}
+
+void GameObject::SetRotation(float r)
+{
+	m_Rotation = r;
 }

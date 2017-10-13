@@ -1,13 +1,23 @@
 #pragma once
+class Camera;
 class Scene : public GameObject
 {
 private:
-	//씬의 카메라를 여기다 두자
+	Camera* m_Camera;
 
 public:
+	CREATE_FUNC(Scene);
+
 	Scene();
 	virtual ~Scene();
 
+	virtual bool Init();
 	virtual void Update(float deltaTime);
  	virtual void Render();
+
+public:
+	Camera* GetCamera()
+	{
+		return m_Camera;
+	}
 };

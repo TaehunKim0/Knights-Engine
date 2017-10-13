@@ -6,7 +6,6 @@ private:
 
 public:
 	CREATE_FUNC(Sample);
-
 	Sample();
 	~Sample();
 
