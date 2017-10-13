@@ -36,6 +36,9 @@
     </ClCompile>
     <ClCompile Include="WinMain.cpp" />
     <ClCompile Include="Sample.cpp" />
+    <ClCompile Include="Input.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h" />
@@ -73,6 +76,9 @@
       <Filter>Node</Filter>
     </ClInclude>
     <ClInclude Include="Sample.h" />
+    <ClInclude Include="Input.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Graphic">

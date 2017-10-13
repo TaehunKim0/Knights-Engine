@@ -155,6 +155,7 @@
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Director.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="PCH.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PCH.h</PrecompiledHeaderFile>
@@ -179,6 +180,7 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="Director.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Input.h" />
     <ClInclude Include="PCH.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourcesMgr.h" />

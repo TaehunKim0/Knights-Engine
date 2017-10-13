@@ -51,6 +51,8 @@ bool Application::GameLoop()
 		}
 		else
 		{
+			Input::GetInstance()->Update();
+
 			Director::GetInstance()->Update(16.f);
 			Renderer::GetInstance()->Begin();
 			Director::GetInstance()->Render();

@@ -25,3 +25,4 @@
 #include"ResourcesMgr.h"
 #include"Sprite.h"
 #include"Animation.h"
+#include"Input.h"
