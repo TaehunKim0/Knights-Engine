@@ -49,6 +49,9 @@
     <ClCompile Include="BoxCollider.cpp">
       <Filter>Node\Collision</Filter>
     </ClCompile>
+    <ClCompile Include="CollisionMgr.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PCH.h">
@@ -99,6 +102,9 @@
     <ClInclude Include="BoxCollider.h">
       <Filter>Node\Collision</Filter>
     </ClInclude>
+    <ClInclude Include="CollisionMgr.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Graphic">
@@ -115,9 +121,6 @@
     </Filter>
     <Filter Include="Resource">
       <UniqueIdentifier>{443ec86c-e3b7-46ad-be41-16514729b656}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game">
-      <UniqueIdentifier>{4c780952-c284-4c88-bba0-6946fa5d7938}</UniqueIdentifier>
     </Filter>
     <Filter Include="Node\Collision">
       <UniqueIdentifier>{df5d6d02-f0b6-4d43-a5b3-1b56df9ebeda}</UniqueIdentifier>
