@@ -14,10 +14,20 @@ Sample::~Sample()
 bool Sample::Init()
 {
 	Scene::Init();
-	man = Sprite::Create(L"Resources/Anubis.png");
+	ground = Sprite::Create(L"Resources/Map/Stage1.png");
 
-	man->SetPosition(500.f, 500.f);
+	man = new Man();
+	man->Init();
+
+	man2 = new Man2();
+	man2->Init();
+
+	man2->SetPosition(200.f, 200.f);
+
+	//AddChild(ground);
 	AddChild(man);
+	AddChild(man2);
+
 
 	return true;
 }
@@ -25,25 +35,12 @@ bool Sample::Init()
 void Sample::Update(float deltaTime)
 {
 	Scene::Update(deltaTime);
+	Move();
+	if ((man->GetCollider()->IsCollisionWith(man2->GetCollider())))
+		printf("Coolide\n");
 
-	if (Input::GetInstance()->GetKeyState(VK_UP) == KeyState::Pressed)
-		man->SetPosition(0.f, -10.f);
-
-	if (Input::GetInstance()->GetKeyState(VK_DOWN) == KeyState::Pressed)
-		man->SetPosition(0.f, 10.f);
-
-	if (Input::GetInstance()->GetKeyState(VK_LEFT) == KeyState::Pressed)
-		man->SetPosition(-10.f, 0.f);
-
-	if (Input::GetInstance()->GetKeyState(VK_RIGHT) == KeyState::Pressed)
-		man->SetPosition(10.f, 0.f);
-
-	if (Input::GetInstance()->GetMouseState(MouseButton::Left) == KeyState::Up)
-		GetCamera()->Translate(0.f, 10.f);
-
-	if (Input::GetInstance()->GetMouseState(MouseButton::Right) == KeyState::Up)
-		GetCamera()->Translate(10.f, 0.f);
-
+	printf("%f, %f \n", man->GetPosition().x, man->GetPosition().y);
+	printf("%f, %f \n", man2->GetPosition().x, man2->GetPosition().y);
 
 }
 

@@ -1,4 +1,5 @@
 #pragma once
+
 class GameObject
 {
 protected:
@@ -45,6 +46,11 @@ public:
 	float GetRotation()
 	{
 		return m_Rotation;
+	}
+
+	Vector2 GetSize()
+	{
+		return m_Size;
 	}
 
 public:

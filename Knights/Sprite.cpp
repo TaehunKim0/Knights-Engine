@@ -56,7 +56,7 @@ void Sprite::Render()
 	SetRect(&rect, 0, 0, static_cast<int>(m_Size.x), static_cast<int>(m_Size.y));
 
 	//그릴 중심점
-	Vector3 center(m_AnchorPoint.x, m_AnchorPoint.y, 0.f);
+	//Vector3 center(m_AnchorPoint.x, m_AnchorPoint.y, 0.f);
 
 	//스프라이트 객체
 	auto sprite = Renderer::GetInstance()->m_Sprite;
@@ -67,7 +67,7 @@ void Sprite::Render()
 	sprite->Draw
 	(m_Texture->GetD3DTexture(),
 		&rect,
-		&center,
+		&Vector3(0.f,0.f,0.f),
 		NULL,
 		D3DCOLOR_XRGB(255, 255, 255)
 	);

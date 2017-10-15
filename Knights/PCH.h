@@ -27,3 +27,5 @@
 #include"Sprite.h"
 #include"Animation.h"
 #include"Input.h"
+#include"Collider.h"
+#include"BoxCollider.h"
