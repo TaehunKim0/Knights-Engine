@@ -16,6 +16,7 @@ BoxCollider * BoxCollider::Create(Vector2 position, Vector2 size)
 	auto box = new (std::nothrow) BoxCollider();
 	if (box && box->InitBoxCollider(position, size))
 	{
+		//CollisionMgr::GetInstance()->
 		return box;
 	}
 

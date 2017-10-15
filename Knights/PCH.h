@@ -29,3 +29,4 @@
 #include"Input.h"
 #include"Collider.h"
 #include"BoxCollider.h"
+#include"CollisionMgr.h"

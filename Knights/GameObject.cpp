@@ -56,6 +56,11 @@ void GameObject::Render()
 	}
 }
 
+GameObject * GameObject::GetParent()
+{
+	return m_Parent;
+}
+
 void GameObject::SetParent(GameObject * parent)
 {
 	m_Parent = parent;

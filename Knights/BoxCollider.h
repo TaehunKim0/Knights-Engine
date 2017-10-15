@@ -12,5 +12,6 @@ public:
 public:
 	bool IsCollisionWith(BoxCollider* other);
 	bool IsPointContain(BoxCollider * point);
+
 };
 
