@@ -16,3 +16,8 @@ void Collider::SetOffSet(Vector2 offset)
 {
 	m_OffSet = offset;
 }
+
+void Collider::Update(float deltaTime)
+{
+	m_Position = m_Parent->GetPosition();
+}

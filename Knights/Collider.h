@@ -9,4 +9,6 @@ public:
 	virtual ~Collider();
 
 	void SetOffSet(Vector2 offset);
+	void Update(float deltaTime);
+
 };

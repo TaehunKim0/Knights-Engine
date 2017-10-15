@@ -40,12 +40,6 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Node</Filter>
     </ClCompile>
-    <ClCompile Include="WinMain.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Sample.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="Collider.cpp">
       <Filter>Node\Collision</Filter>
     </ClCompile>
@@ -57,7 +51,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Singleton.h" />
     <ClInclude Include="PCH.h">
       <Filter>PCH,Type</Filter>
     </ClInclude>
@@ -96,9 +89,6 @@
     </ClInclude>
     <ClInclude Include="Camera.h">
       <Filter>Node</Filter>
-    </ClInclude>
-    <ClInclude Include="Sample.h">
-      <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Collider.h">
       <Filter>Node\Collision</Filter>

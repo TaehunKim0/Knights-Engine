@@ -1,6 +1,5 @@
-#include "PCH.h"
+#include"PCH.h"
 #include "Application.h"
-
 
 Application::Application()
 	: m_handle(nullptr)
@@ -49,10 +48,11 @@ bool Application::GameLoop()
 			TranslateMessage(&Msg);
 			DispatchMessage(&Msg);
 		}
+
 		else
 		{
 			Input::GetInstance()->Update();
-
+			
 			Director::GetInstance()->Update(16.f);
 			Renderer::GetInstance()->Begin();
 			Director::GetInstance()->Render();
@@ -108,7 +108,7 @@ bool Application::_CreateWindow(int width, int height, bool fullScreen)
 		x = y = CW_USEDEFAULT;
 	}
 	
-	m_handle = CreateWindow(L"Knights", Title, Style, x, y, width, height, NULL, NULL, wc.hInstance, NULL);
+	m_handle = CreateWindow(L"Ennead", Title, Style, x, y, width, height, NULL, NULL, wc.hInstance, NULL);
 	
 	if (m_handle == NULL)
 		return false;
