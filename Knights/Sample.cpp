@@ -28,7 +28,6 @@ bool Sample::Init()
 	AddChild(man);
 	AddChild(man2);
 
-
 	return true;
 }
 
@@ -38,9 +37,6 @@ void Sample::Update(float deltaTime)
 	Move();
 	if ((man->GetCollider()->IsCollisionWith(man2->GetCollider())))
 		printf("Coolide\n");
-
-	printf("%f, %f \n", man->GetPosition().x, man->GetPosition().y);
-	printf("%f, %f \n", man2->GetPosition().x, man2->GetPosition().y);
 
 }
 

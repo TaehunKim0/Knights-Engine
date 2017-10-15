@@ -4,7 +4,6 @@ class CircleCollider : public Collider
 private:
 	float m_Raidus;
 
-
 public:
 	CircleCollider();
 	~CircleCollider();

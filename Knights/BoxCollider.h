@@ -2,8 +2,6 @@
 class BoxCollider : public Collider
 {
 private:
-
-
 public:
 	BoxCollider();
 	~BoxCollider();

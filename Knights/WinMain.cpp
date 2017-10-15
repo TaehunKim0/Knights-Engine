@@ -7,6 +7,7 @@ INT WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 	AllocConsole();
 	FILE* stream;
 	freopen_s(&stream, "CONOUT$", "wt", stdout);
+
 #endif
 	Application* app = Application::GetInstance();
 	//√ ±‚»≠
