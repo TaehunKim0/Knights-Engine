@@ -53,6 +53,8 @@ bool Application::GameLoop()
 		{
 			Input::GetInstance()->Update();
 			
+			CollisionMgr::GetInstance()->Update(16.f);
+
 			Director::GetInstance()->Update(16.f);
 			Renderer::GetInstance()->Begin();
 			Director::GetInstance()->Render();
