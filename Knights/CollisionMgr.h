@@ -14,5 +14,5 @@ public:
 
 public:
 	void AddBoxCollider(BoxCollider* box);
-
+	void Destroy(BoxCollider* child);
 };

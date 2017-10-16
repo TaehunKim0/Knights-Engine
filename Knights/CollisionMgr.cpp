@@ -44,3 +44,12 @@ void CollisionMgr::AddBoxCollider(BoxCollider * box)
 	m_BoxColliderList.push_back(box);
 
 }
+
+void CollisionMgr::Destroy(BoxCollider * child)
+{
+	auto iterator = std::find(std::begin(m_BoxColliderList), std::end(m_BoxColliderList), child);
+	if (iterator != m_BoxColliderList.end())
+	{
+		m_BoxColliderList.erase(iterator); //Collider 에서도 제거
+	}
+}

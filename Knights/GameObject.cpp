@@ -8,7 +8,7 @@ GameObject::GameObject()
 	,m_Scale(1.f,1.f)
 	,m_Size(0.f,0.f)
 	,m_Rotation(0.f)
-	,m_Name("")
+	,m_Name(L"")
 	,m_Visible(1)
 {
 	D3DXMatrixIdentity(&m_Matrix); //단위행렬로 만듬
@@ -29,6 +29,12 @@ void GameObject::Update(float deltaTime)
 {
 	if (!m_Visible)
 		return;
+
+	while (!DestroyList.empty())
+	{
+		RemoveChild(DestroyList.front());
+		DestroyList.pop_back();
+	}
 
 	//Children Update
 	for each(const auto& child in m_Children)
@@ -54,6 +60,17 @@ void GameObject::Render()
 	{
 		child->Render();
 	}
+}
+
+void GameObject::Release()
+{
+	for each(auto child in m_Children)
+	{
+		child->Release();
+	}
+
+	printf("Object Release : %s\n", m_Name);
+
 }
 
 GameObject * GameObject::GetParent()
@@ -88,9 +105,10 @@ void GameObject::RemoveChild(GameObject * child)
 	auto iterator = std::find(std::begin(m_Children), std::end(m_Children), child);
 	if (iterator != m_Children.end())
 	{
-		SAFE_DELETE(child); //해제
-
 		m_Children.erase(iterator); //m_Children 의 목록에서도 제거
+		child->Release();
+
+		SAFE_DELETE(child); //해제
 	}
 
 }
