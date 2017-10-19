@@ -2,6 +2,7 @@
 
 #define SAFE_DELETE(x) { if(x) { delete x; x = NULL; } }
 #define SAFE_RELEASE(x) { if(x) { x->Release(); x = NULL; } }
+#define SAFE_REDELETE(x) { if(x) {x->Release(); SAFE_DELETE(x);}}
 
 #define WIN32_LEAN_AND_MEAN //자주 사용하지 않는 api 정리
 

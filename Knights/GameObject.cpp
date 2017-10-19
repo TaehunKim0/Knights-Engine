@@ -10,6 +10,7 @@ GameObject::GameObject()
 	,m_Rotation(0.f)
 	,m_Name(L"")
 	,m_Visible(1)
+	,m_ZOrder(0)
 {
 	D3DXMatrixIdentity(&m_Matrix); //단위행렬로 만듬
 }
@@ -51,6 +52,8 @@ void GameObject::Render()
 
 	D3DXMatrixTransformation2D(&m_Matrix, NULL, 0.f, &m_Scale, NULL, m_Rotation, &m_Position);
 	//Matrix 계산
+
+	SortZOrder();
 
 	if (m_Parent)
 		m_Matrix *= m_Parent->m_Matrix;
