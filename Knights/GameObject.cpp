@@ -73,6 +73,13 @@ void GameObject::Release()
 
 }
 
+void GameObject::SortZOrder()
+{
+	std::sort(m_Children.begin(), m_Children.end(), [](GameObject* lhs, GameObject* rhs) {
+		return lhs->GetZOrder() < rhs->GetZOrder();
+	});
+}
+
 GameObject * GameObject::GetParent()
 {
 	return m_Parent;

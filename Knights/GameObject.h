@@ -23,6 +23,8 @@ protected:
 	Vector2 m_AnchorPoint; //내 사이즈에 따라 AnchorPoint는 바뀌기 때문에 사이즈에 따라 바뀐 앵커포인트
 	Tag m_Tag;
 
+	int m_ZOrder;
+
 	float m_Rotation;
 
 	std::wstring m_Name;
@@ -37,6 +39,9 @@ public:
 	virtual void Render();
 	virtual void Release();
 
+
+	void SortZOrder();
+	int GetZOrder() { return m_ZOrder; }
 	GameObject* GetParent();
 	void SetParent(GameObject* parent);
 	void AddChild(GameObject* child);

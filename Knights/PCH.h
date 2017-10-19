@@ -8,11 +8,15 @@
 #include<Windows.h>
 #include<d3d9.h>
 #include<d3dx9.h>
-#include<string>
+#include<stdio.h>
+#include<time.h>
 
+#include<algorithm>
+#include<string>
 #include<vector>
 #include<math.h>
 #include<unordered_map>
+#include<functional>
 
 #include"TypeDefine.h"
 #include"Singleton.h"
