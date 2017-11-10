@@ -1,6 +1,7 @@
 #pragma once
 enum class Tag
 {
+	None = 0,
 	Player = 1,
 	Enemy
 };
@@ -81,6 +82,9 @@ public:
 
 	Tag GetTag()
 	{
+		if (m_Parent == nullptr)
+			return Tag::None;
+
 		return m_Tag;
 	}
 

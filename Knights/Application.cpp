@@ -51,11 +51,10 @@ bool Application::GameLoop()
 
 		else
 		{
+			//GameTime++;
 			Input::GetInstance()->Update();
-			
-			CollisionMgr::GetInstance()->Update(16.f);
-
 			Director::GetInstance()->Update(16.f);
+			CollisionMgr::GetInstance()->Update(16.f);
 			Renderer::GetInstance()->Begin();
 			Director::GetInstance()->Render();
 			Renderer::GetInstance()->End();

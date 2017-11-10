@@ -11,6 +11,7 @@ GameObject::GameObject()
 	,m_Name(L"")
 	,m_Visible(1)
 	,m_ZOrder(0)
+	,m_Tag(Tag::None)
 {
 	D3DXMatrixIdentity(&m_Matrix); //단위행렬로 만듬
 }
