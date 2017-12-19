@@ -55,3 +55,17 @@ bool BoxCollider::IsPointContain(BoxCollider * point)
 
 	return false;
 }
+
+bool BoxCollider::IsPointInBox(int mouseX, int mouseY)
+{
+	auto m_Right = m_Position.x + m_Size.x;
+	auto m_Bottom = m_Position.y + m_Size.y;
+
+	if (m_Position.x <= mouseX && mouseX <= m_Right)
+		if(m_Position.y <= mouseY && mouseY <= m_Bottom)
+	{
+			return true;
+	}
+
+	return false;
+}

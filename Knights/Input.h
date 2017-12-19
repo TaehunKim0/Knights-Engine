@@ -31,6 +31,11 @@ public:
 	KeyState GetKeyState(int key);
 	KeyState GetMouseState(int button);
 
+	Vector2 GetMousePosition()
+	{
+		return m_MousePosition;
+	}
+
 	void UpdateKeyState();
 	void UpdateMouseState();
 };
