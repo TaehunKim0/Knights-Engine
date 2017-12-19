@@ -11,9 +11,9 @@ public:
 	bool Init();
 	void Update(float deltatime);
 	void Render();
-
 public:
 	void AddBoxCollider(BoxCollider* box);
+	bool IsPointInBox(Vector2 size, Vector2 position);
 	void Destroy(BoxCollider* child);
 };
 

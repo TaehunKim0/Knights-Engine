@@ -45,6 +45,23 @@ void CollisionMgr::AddBoxCollider(BoxCollider * box)
 
 }
 
+bool CollisionMgr::IsPointInBox(Vector2 size, Vector2 position)
+{
+	auto m_Right = position.x + size.x;
+	auto m_Bottom = position.y + size.y;
+
+	int mouseX = Input::GetInstance()->GetMousePosition().x;
+	int mouseY = Input::GetInstance()->GetMousePosition().y;
+
+	if (position.x <= mouseX && mouseX <= m_Right)
+		if (position.y <= mouseY && mouseY <= m_Bottom)
+		{
+			return true;
+		}
+
+	return false;
+}
+
 void CollisionMgr::Destroy(BoxCollider * child)
 {
 	auto iterator = std::find(std::begin(m_BoxColliderList), std::end(m_BoxColliderList), child);
@@ -53,3 +70,4 @@ void CollisionMgr::Destroy(BoxCollider * child)
 		m_BoxColliderList.erase(iterator); //Collider 에서도 제거
 	}
 }
+
