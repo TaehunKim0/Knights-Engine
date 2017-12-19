@@ -95,6 +95,9 @@ public:
 	void SetPosition(Vector2 pos);
 	void SetScale(Vector2 scale);
 	void SetRotation(float r);
-
+	void SetVisible(bool a)
+	{
+		m_Visible = a;
+	}
 };
 

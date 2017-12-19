@@ -38,6 +38,8 @@ void Animation::AddFrame(std::wstring filename)
 	auto frame = Sprite::Create(filename);
 	frame->SetParent(this);
 
+	m_Size = frame->GetSize();
+
 	Anim.push_back(frame);
 }
 
