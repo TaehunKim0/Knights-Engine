@@ -6,6 +6,7 @@ Animation::Animation()
 	:m_CurrentFrame(0)
 	,m_Delay(0)
 	,m_FrameCounter(0)
+	,IsAnimEnd(0)
 {
 }
 
@@ -51,10 +52,12 @@ void Animation::Update(float deltaTime)
 	}
 
 	if (m_CurrentFrame > (Anim.size() - 1))
+	{
 		m_CurrentFrame = 0;
+		IsAnimEnd = 1;
+	}
 
 	Anim.at(m_CurrentFrame)->Update(deltaTime);
-
 }
 
 void Animation::Render()

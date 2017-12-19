@@ -33,6 +33,8 @@ bool Sprite::InitFromFile(const std::wstring & filename)
 	//스프라이트 사이즈 설정(텍스쳐의 사이즈와 동일)
 	m_Size = m_Texture->GetSize();
 
+	printf("m_Size : %f , %f\n", m_Size.x, m_Size.y);
+
 	//텍스쳐를 그릴 중심 위치 설정
 	SetAnchorPoint(0.5f, 0.5f);
 

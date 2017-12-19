@@ -9,6 +9,8 @@ private:
 	int m_Delay;
 	int m_FrameCounter;
 
+	bool IsAnimEnd;
+
 public:
 	Animation();
 	~Animation();
@@ -18,6 +20,11 @@ public:
 	bool Init(int delay);
 
 	void AddFrame(std::wstring filename);
+
+	bool GetIsAnd()
+	{
+		return IsAnimEnd;
+	}
 
 public:
 	void Update(float deltaTime);

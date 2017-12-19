@@ -53,7 +53,9 @@ public:
 	virtual void Destroy()
 	 {
 		if (m_Parent)
+		{
 			m_Parent->DestroyList.push_back(this);
+		}
 
 		printf("Object Destroy : %s\n", m_Name.c_str());
 
