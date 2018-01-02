@@ -3,8 +3,18 @@ enum class Tag
 {
 	None = 0,
 	Player = 1,
-	Enemy
+	Enemy,
+	Structure
 };
+
+enum class Direction
+{
+	Left = 1,
+	Right,
+	Up,
+	Down
+};
+
 class BoxCollider;
 class GameObject
 {
@@ -23,6 +33,7 @@ protected:
 	//Vector2 AnchorPoint; //입력받을 AnchorPoint
 	Vector2 m_AnchorPoint; //내 사이즈에 따라 AnchorPoint는 바뀌기 때문에 사이즈에 따라 바뀐 앵커포인트
 	Tag m_Tag;
+	Direction m_Direction;
 
 	int m_ZOrder;
 
@@ -32,6 +43,7 @@ protected:
 
 	bool m_Visible;
 
+	bool UsingParentMatrix;
 public:
 	GameObject();
 	virtual ~GameObject();
@@ -40,8 +52,9 @@ public:
 	virtual void Render();
 	virtual void Release();
 
-
+	void MatrixUsing(bool a) { UsingParentMatrix = a; }
 	void SortZOrder();
+	void SetZOrder(int z) { m_ZOrder = z; }
 	int GetZOrder() { return m_ZOrder; }
 	GameObject* GetParent();
 	void SetParent(GameObject* parent);
@@ -62,6 +75,16 @@ public:
 	}
 
 public:
+	void SetTag(Tag tag)
+	{
+		m_Tag = tag;
+	}
+
+	void SetDirection(Direction direction)
+	{
+		m_Direction = direction;
+	}
+
 	Vector2 GetPosition()
 	{
 		return m_Position;
@@ -90,9 +113,18 @@ public:
 		return m_Tag;
 	}
 
+	Direction GetDirection()
+	{
+		return m_Direction;
+	}
+
+
 public:
 	void SetPosition(float x, float y);
 	void SetPosition(Vector2 pos);
+
+	void PositionSet(float x, float y) { m_Position.x = x; m_Position.y = y; }
+
 	void SetScale(Vector2 scale);
 	void SetRotation(float r);
 	void SetVisible(bool a)

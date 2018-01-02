@@ -1,4 +1,4 @@
-#include "PCH.h"
+	#include "PCH.h"
 #include "GameObject.h"
 
 
@@ -12,6 +12,7 @@ GameObject::GameObject()
 	,m_Visible(1)
 	,m_ZOrder(0)
 	,m_Tag(Tag::None)
+	,UsingParentMatrix(1)
 {
 	D3DXMatrixIdentity(&m_Matrix); //단위행렬로 만듬
 }
@@ -20,6 +21,7 @@ GameObject::~GameObject()
 {
 	for each(auto child in m_Children)
 	{
+		printf("GameObject Delete\n");
 		SAFE_DELETE(child);
 	}
 
@@ -56,9 +58,11 @@ void GameObject::Render()
 
 	SortZOrder();
 
-	if (m_Parent)
+	if (m_Parent && UsingParentMatrix)
+	{
 		m_Matrix *= m_Parent->m_Matrix;
 
+	}
 	//Children Render
 	for each(const auto& child in m_Children) //const & (읽기 전용으로 가져올때 쓰자)
 	{

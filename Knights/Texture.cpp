@@ -29,6 +29,9 @@ Texture * Texture::Create(const std::wstring & filename)
 bool Texture::InitFromFile(const std::wstring & filename)
 {
 	//1. 파일로부터 텍스쳐를 만든다.
+
+	D3DCOLOR colorkey = D3DCOLOR_XRGB(0, 0, 0);
+
 	HRESULT hr;
 		hr = D3DXCreateTextureFromFileEx
 		(

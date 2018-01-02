@@ -11,6 +11,7 @@ public:
 	Scene();
 	virtual ~Scene();
 
+	virtual void Release();
 	virtual bool Init();
 	virtual void Update(float deltaTime);
  	virtual void Render();

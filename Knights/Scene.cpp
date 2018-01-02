@@ -10,6 +10,10 @@ Scene::Scene()
 Scene::~Scene()
 {
 }
+void Scene::Release()
+{
+	GameObject::Release();
+}
 
 bool Scene::Init()
 {

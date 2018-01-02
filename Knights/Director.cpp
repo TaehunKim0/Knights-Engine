@@ -1,7 +1,6 @@
 #include "PCH.h"
 #include "Director.h"
 
-
 Director::Director()
 	:CurrentScene(nullptr)
 {
@@ -34,4 +33,9 @@ void Director::Render()
 		CurrentScene->Render();
 	else
 		return;
+}
+
+bool Director::IsInWindowRect(Vector2 pos)
+{
+	return false;
 }

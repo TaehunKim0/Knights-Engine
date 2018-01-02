@@ -6,6 +6,7 @@ private:
 	static T* instance;
 
 public:
+
 	Singleton()
 	{
 	}
@@ -14,16 +15,23 @@ public:
 	{
 		if (instance)
 		{
-			delete instance;
+			//delete instance;
 			instance = nullptr;
+		}
+
+		else if (instance == nullptr)
+		{
+			printf("Singleton instance null\n");
 		}
 	}
 
 	static T* GetInstance()
 	{
 		if (instance == nullptr)
+		{
 			instance = new T();
-
+			//atexit(Destroy);
+		}
 		return instance;
 	}
 

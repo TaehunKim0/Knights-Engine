@@ -20,19 +20,19 @@ void CollisionMgr::Update(float deltatime)
 		{
 			if (box1 != box2)
 			{
-				if (box1->GetParent()->GetTag() != box2->GetParent()->GetTag())
-				{
-					if (box1->IsCollisionWith(box2))
+					if (box1->GetParent()->GetTag() != box2->GetParent()->GetTag())
 					{
-						box1->GetParent()->OnCollision(box2->GetParent());
-						box2->GetParent()->OnCollision(box1->GetParent());
+						if (box1->IsCollisionWith(box2))
+						{
+							box1->GetParent()->OnCollision(box2->GetParent());
+							box2->GetParent()->OnCollision(box1->GetParent());
+						}
 					}
 				}
 			}
 		}
 	}
 
-}
 
 void CollisionMgr::Render()
 {

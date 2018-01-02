@@ -13,5 +13,6 @@ public:
 	bool IsCollisionWith(BoxCollider* other);
 	bool IsPointContain(BoxCollider * point);
 	bool IsPointInBox();
+	bool UseMe;
 };
 

@@ -3,6 +3,7 @@ class Sprite : public GameObject
 {
 private:
 	Texture* m_Texture;
+	bool m_Alpha;
 
 public:
 	Sprite();
@@ -16,6 +17,16 @@ public:
 	void Render();
 
 	void SetAnchorPoint(float x, float y);
+
+	Texture* GetTexture()
+	{
+		return m_Texture;
+	}
+
+	void Alpha(bool a)
+	{
+		m_Alpha = a;
+	}
 
 };
 

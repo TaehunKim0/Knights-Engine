@@ -20,8 +20,8 @@ void Input::Update()
 
 KeyState Input::GetKeyState(int key)
 {
-	bool prevState = m_PrevKeyState[key];
-	bool nowState = m_NowKeyState[key];
+	prevState = m_PrevKeyState[key];
+	nowState = m_NowKeyState[key];
 
 	if (prevState == false && nowState == true)
 	{

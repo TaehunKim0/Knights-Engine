@@ -12,4 +12,7 @@ public:
 
 	void Update(float deltaTime);
 	void Render();
+
+	bool IsInWindowRect(Vector2 pos);
+
 };

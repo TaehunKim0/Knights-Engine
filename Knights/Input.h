@@ -20,6 +20,9 @@ private:
 	bool m_PrevKeyState[256];
 	bool m_NowKeyState[256];
 
+	bool prevState;
+	bool nowState;
+
 	Vector2 m_MousePosition;
 
 public:
@@ -34,6 +37,19 @@ public:
 	Vector2 GetMousePosition()
 	{
 		return m_MousePosition;
+	}
+
+	bool GetIsInput(int key)
+	{
+		prevState = m_PrevKeyState[key];
+		nowState = m_NowKeyState[key];
+
+		if (nowState == true)
+			return true;
+
+		else
+			return false;
+
 	}
 
 	void UpdateKeyState();

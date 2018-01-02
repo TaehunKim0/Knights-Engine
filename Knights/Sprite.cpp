@@ -4,6 +4,7 @@
 
 Sprite::Sprite()
 	:m_Texture(nullptr)
+	,m_Alpha(0)
 {
 }
 
@@ -33,7 +34,7 @@ bool Sprite::InitFromFile(const std::wstring & filename)
 	//스프라이트 사이즈 설정(텍스쳐의 사이즈와 동일)
 	m_Size = m_Texture->GetSize();
 
-	printf("m_Size : %f , %f\n", m_Size.x, m_Size.y);
+	//printf("m_Size : %f , %f\n", m_Size.x, m_Size.y);
 
 	//텍스쳐를 그릴 중심 위치 설정
 	SetAnchorPoint(0.5f, 0.5f);
@@ -66,13 +67,20 @@ void Sprite::Render()
 	sprite->Begin(D3DXSPRITE_ALPHABLEND);
 	sprite->SetTransform(&m_Matrix);
 
+	auto color = D3DCOLOR_XRGB(255, 255, 255);
+
+	if (m_Alpha)
+		color = D3DCOLOR_XRGB(0, 0, 0);
+
 	sprite->Draw
 	(m_Texture->GetD3DTexture(),
 		&rect,
 		&Vector3(0.f,0.f,0.f),
 		NULL,
-		D3DCOLOR_XRGB(255, 255, 255)
+		color
 	);
+
+	
 
 	sprite->End();
 }

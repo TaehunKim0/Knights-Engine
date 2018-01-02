@@ -11,6 +11,7 @@
 #include<d3dx9.h>
 #include<stdio.h>
 #include<time.h>
+#include<stdlib.h>
 
 #include<algorithm>
 #include<string>

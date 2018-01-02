@@ -4,8 +4,8 @@
 
 BoxCollider::BoxCollider()
 {
+	UseMe = 0;
 }
-
 
 BoxCollider::~BoxCollider()
 {
